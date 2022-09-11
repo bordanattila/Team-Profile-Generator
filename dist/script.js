@@ -1,21 +1,48 @@
 // import managerData from "./employees.json" assert { type: "JSON"};
 
-const {theManager} = require(".././lib/menu")
+// const {theManager} = require(".././lib/menu")
 
-function create (whatever) {
+function create (theManager, allEngineer, allIntern) {
     console.log("this is whatever")
-    console.log(whatever)
-    // console.log(whatever.Manager[0].name)
-    // // e.preventDefault();
-    // const div = $("#test");
-    // const manager = $("<h3>");
-    // // const mID = $("<p>");
-    // // const mEmail = $("<p>");
-    // // const mOffice = $("<p>");
-    // manager.text(whatever.Manager.name)
-    // div.append(manager)
+    console.log(theManager)
+    console.log(allEngineer)
+    console.log(allIntern)
+   
+    const html = 
+    `<!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+    </head>
+    <body>
+      <h1>Team Profile Generator</h1>
+     ${allEngineer.map(function (engineer) {
+        console.log("***", engineer.employeeName, engineer.getName())
+        return `
+        <div>${engineer.getName()}</div>
+        `
+     }) 
+
+     }
+
+     ${allIntern.map(function (intern) {
+        console.log("***", intern.employeeName, intern.getName())
+        return `
+        <div>${intern.getName()}</div>
+        `
+     }) 
+
+     }
+      
+    </body>
+    
+    </html>`;
+    console.log(html)
 }
 // create(theManager);
 
 
-module.exports = create;
+module.exports = {create};
