@@ -1,7 +1,6 @@
-// import managerData from "./employees.json" assert { type: "JSON"};
+const fs = require("fs");
 
-// const {theManager} = require(".././lib/menu")
-
+//Generate index.html based on user input
 function create (theManager, allEngineer, allIntern) {
     console.log("this is whatever")
     console.log(theManager)
@@ -19,10 +18,23 @@ function create (theManager, allEngineer, allIntern) {
     </head>
     <body>
       <h1>Team Profile Generator</h1>
+      ${theManager.map(function (manager) {
+         return `
+         <div>${manager.getName()}</div>
+         <div>${manager.getRole()}</div>
+         <div>${manager.getID()}</div>
+         <div>${manager.getEmail()}</div>
+         <div>${manager.getOfficenumber()}</div>
+         `
+      })}
      ${allEngineer.map(function (engineer) {
         console.log("***", engineer.employeeName, engineer.getName())
         return `
         <div>${engineer.getName()}</div>
+        <div>${engineer.getRole()}</div>
+        <div>${engineer.getID()}</div>
+        <div>${engineer.getEmail()}</div>
+        <div>${engineer.getGitHub()}</div>
         `
      }) 
 
@@ -32,6 +44,10 @@ function create (theManager, allEngineer, allIntern) {
         console.log("***", intern.employeeName, intern.getName())
         return `
         <div>${intern.getName()}</div>
+        <div>${intern.getRole()}</div>
+        <div>${intern.getID()}</div>
+        <div>${intern.getEmail()}</div>
+        <div>${intern.getSchool()}</div>
         `
      }) 
 
@@ -40,9 +56,9 @@ function create (theManager, allEngineer, allIntern) {
     </body>
     
     </html>`;
-    console.log(html)
-}
-// create(theManager);
 
+    //write the index.html
+    fs.writeFile("./dist/index.html", html, (error) => error ? console.log("File not saved.") : console.log("File saved successfully."));
+};
 
 module.exports = {create};
