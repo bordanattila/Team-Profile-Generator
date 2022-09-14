@@ -10,7 +10,7 @@ function create (theManager, allEngineer, allIntern) {
       <meta charset="UTF-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Document</title>
+      <title>Team Profile Generator</title>
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
       <link rel="stylesheet" href="style.css">
@@ -29,7 +29,7 @@ function create (theManager, allEngineer, allIntern) {
             <div class="card-header">Name: ${manager.getName()}<br>Role: 🧑‍💼 ${manager.getRole()}</div>
             <ul class="list-group list-group-flush">
                <li class="list-group-item">ID: ${manager.getID()}</li>
-               <li class="list-group-item">Email: ${manager.getEmail()}</li>
+               <li class="list-group-item"><a href="mailto:${manager.getEmail()}">Email: this is the id</a></li>
                <li class="list-group-item">Office Number: ${manager.getOfficenumber()}</li>
             </ul>
          </div>
@@ -41,8 +41,8 @@ function create (theManager, allEngineer, allIntern) {
             <div class="card-header">Name : ${engineer.getName()}<br>Role: 🧑‍🔬 ${engineer.getRole()}</div>
             <ul class="list-group list-group-flush">
                <li class="list-group-item">ID: ${engineer.getID()}</li>
-               <li class="list-group-item">Email: ${engineer.getEmail()}</li>
-               <li class="list-group-item">GitHub: ${engineer.getGitHub()}</li>
+               <li class="list-group-item"><a href="mailto:${engineer.getEmail()}">Email: this is the id</a></li>
+               <li class="list-group-item"><a target="_blank" href="https://www.github.com/${engineer.getGitHub()}">${engineer.getGitHub()}</a></li>
             </ul>
          </div>
         `
@@ -55,7 +55,7 @@ function create (theManager, allEngineer, allIntern) {
             <div class="card-header">Name : ${intern.getName()}<br>Role: 👩‍🎓 ${intern.getRole()}</div>
             <ul class="list-group list-group-flush">
                <li class="list-group-item">ID: ${intern.getID()}</li>
-               <li class="list-group-item">Email: ${intern.getEmail()}</li>
+               <li class="list-group-item"><a href="mailto:${intern.getEmail()}">Email: this is the id</a></li>
                <li class="list-group-item">School: ${intern.getSchool()}</li>
             </ul>
          </div>
