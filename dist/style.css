@@ -1,0 +1,42 @@
+body {
+    background-color: #E0DECA;
+    color: #162735;
+}
+
+header {
+    text-align: center;
+}
+
+h1 {
+    background-color: #9EB23B;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.margin {
+    margin: 0.5rem 4rem;
+}
+
+.background {
+    background-color: #FCF9C6;
+    margin-right: 5px;
+}
+
+.card {
+    width: 20rem;
+}
+
+.card-header {
+    background-color: #C7D36F;
+    font-size: 1.3rem;
+}
+
+.card {
+    padding: 0;
+}
+
+.list-group {
+    padding: 1rem;
+}
