@@ -9,6 +9,9 @@ This simple application allow the user to enter information about the team and g
 
 ## Usage
 After installation run the index.js with the `node index.js`. The application will prompt what information to enter such as "What is the manager's name?". Once the manager is entered the user can select whether enter enginner, intern, or finish the process. The HTML file is generated automatically in the dist folder when the user exits the entering process. 
+Video link for usage:
+https://drive.google.com/file/d/1quftqTHQeUEQYQqM8cTwamiDsMwil5IE/view?usp=sharing
 
 ## Tests
 `npm run test`
+
